@@ -4,8 +4,8 @@ class Describe:
             'class_label', #0 background, 1 signal
 
             # props
-            'jet_1_b-tag', #tag
-            'jet_1_eta', # -ln( tan(.5 * polar_angle) )
+            'jet_1_b-tag', #tag?
+            'jet_1_eta', # -ln( tan(.5 * polar_angle) ) lol
             'jet_1_phi', # azimuthal angle
             'jet_1_pt',  # momentum
             'jet_2_b-tag', #
