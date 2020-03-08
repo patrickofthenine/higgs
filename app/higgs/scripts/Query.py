@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser(description='get higgs data from db')
 parser.add_argument('--database', type=str)
 args = parser.parse_args()
 
-class Higgs:
+class Query:
 	def __init__(self):
 		self.BATCH_SIZE = 10000
 		self.processed = 0
@@ -59,5 +59,3 @@ class Higgs:
 	def run(self):
 		query = "SELECT {} FROM {}".format('*', args.database)
 		self.execute(query, self.process)
-
-Higgs().run()

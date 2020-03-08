@@ -1,6 +1,6 @@
 from django.urls import path
-from . import views
+from backend.views import HiggsView
 
 urlpatterns = [
-	path('', views.index, name='index')
+	path('', HiggsView.as_view(), name='index')
 ]

@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.views.generic import View
-from django.db import models
-# Create your views here.
+from django.views import View
+from backend.models import Higgs
 
-def index(View):
-	try:
-		return HttpResponse('res')
-	except Exception as e:
-		logging.warning(e)
+class HiggsView(View):
+	def get(self, request):
+		try:
+			events = Higgs.objects.filter(class_label=1)[:10]
+			return HttpResponse(events)
+		except Exception as e:
+			logging.warning(e)
